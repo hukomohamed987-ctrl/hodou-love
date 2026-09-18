@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#160d1d">
+<meta name="description" content="هدوء - هدية رومانسية خاصة">
+<link rel="manifest" href="manifest.json">
+<title>هدوء ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+:root{--pink:#ff7fba;--pink2:#e84d98;--bg:#100914;--card:#281528;--text:#ffe5f2;--muted:#caa9bd}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 50% 0,#48203e 0,#180e1d 40%,#0d0811 100%);color:var(--text);font-family:Cairo,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:42px 42px}
+.app{max-width:460px;min-height:100vh;margin:auto;position:relative;padding-bottom:86px}
+.screen{display:none;min-height:100vh;padding:25px 18px 110px;animation:fade .35s ease}.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1,h2,h3,p{margin-top:0}.center{text-align:center}.small{font-size:12px;color:var(--muted)}
+.brand{font-size:44px;font-weight:800;letter-spacing:2px;text-shadow:0 0 22px #ff79b5;margin-top:20px}
+.subtitle{color:#ffd0e6;margin-bottom:28px}.flower{font-size:54px;filter:drop-shadow(0 0 15px #ff74b5)}
+.btn{border:1px solid #ff78b6;background:linear-gradient(135deg,#ff9ac9,#d94b91);color:white;border-radius:28px;padding:13px 24px;font:inherit;font-weight:700;box-shadow:0 5px 25px #c63b7b44;cursor:pointer}.btn.secondary{background:#29162b;border-color:#9d557c}
+.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(ellipse at 50% 30%,#6c315d22,transparent 65%)}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.top h2{margin:0;font-size:23px}.back{background:none;border:0;color:var(--pink);font-size:25px;cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.tile{min-height:122px;border:1px solid #9b527b88;border-radius:18px;background:linear-gradient(145deg,#392039cc,#1c101fdd);padding:16px 10px;text-align:center;color:var(--text);font:inherit;cursor:pointer;box-shadow:inset 0 0 20px #ff7ab40a}.tile .icon{display:block;font-size:33px;margin-bottom:6px}.tile b{font-size:15px}.tile span{display:block;font-size:11px;color:var(--muted)}
+.card{background:linear-gradient(145deg,#382037dd,#1a0e1bdd);border:1px solid #9c557d88;border-radius:20px;padding:22px;box-shadow:0 10px 35px #0004;margin:14px 0}
+.message{font-size:18px;line-height:2.1;text-align:center}.heart{color:var(--pink);text-shadow:0 0 15px #ff70b0}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(460px,100%);display:flex;justify-content:space-around;background:#170c1deF;border-top:1px solid #75405e;padding:10px 4px calc(10px + env(safe-area-inset-bottom));z-index:5;backdrop-filter:blur(12px)}.nav button{background:none;border:0;color:#bba0b5;font:inherit;font-size:11px;cursor:pointer}.nav button.active{color:var(--pink)}.nav i{display:block;font-style:normal;font-size:24px}
+.counter{font-size:65px;font-weight:800;color:var(--pink);text-shadow:0 0 25px #ff72b077}.counterbox{text-align:center;border:1px solid #ff7ab088;border-radius:28px;padding:28px 10px;background:radial-gradient(circle,#5b2b4c66,#1b0f20)}
+.row{display:flex;gap:10px}.row>*{flex:1}input{width:100%;padding:12px;border-radius:12px;border:1px solid #8d4d70;background:#160c19;color:white;font:inherit;margin:6px 0 12px}
+.starfield{height:350px;border-radius:22px;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 18%,#ffd3e9 0 2%,transparent 3%),linear-gradient(#090d2c,#1b1231 55%,#482442)}.starfield:before{content:"✦  ·  ✧   ·  ✦   ·  ✧  ·  ✦  ·  ✧";position:absolute;inset:20px;color:#fff8c8;line-height:4;font-size:22px;word-spacing:17px}.moon{position:absolute;top:35px;left:35px;font-size:65px}.startext{position:absolute;bottom:35px;right:18px;left:18px;text-align:center;font-size:17px;line-height:2}
+.gift{font-size:100px;text-align:center;filter:drop-shadow(0 0 18px #ff80ba)}.surprise{display:none}.surprise.show{display:block}
+.footer-note{text-align:center;color:#9e7d92;font-size:11px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="app">
+<section id="welcome" class="screen active">
+  <div class="hero center">
+    <div class="flower">🌸</div><div class="brand">هدوء</div>
+    <p class="subtitle">إنتِ كل الهدوء اللي بحبه في الدنيا ❤️</p>
+    <p class="small">هدية صغيرة لقلب كبير</p>
+    <button class="btn" onclick="go('home')">ابدئي ❤️</button>
+  </div>
+</section>
+
+<section id="home" class="screen">
+  <div class="center"><div class="small">مرحبًا يا</div><h1 class="brand" style="font-size:35px;margin:0">هدوء</h1><p class="subtitle">وجودك في حياتي هو أجمل شيء .. ❤️</p></div>
+  <div class="grid">
+    <button class="tile" onclick="go('messages')"><span class="icon">💌</span><b>رسائل الحب</b><span>كلام من قلبي</span></button>
+    <button class="tile" onclick="go('music')"><span class="icon">🎵</span><b>موسيقتك</b><span>لحظات هادية</span></button>
+    <button class="tile" onclick="go('counter')"><span class="icon">🕰️</span><b>العداد</b><span>من يوم ما عرفتك</span></button>
+    <button class="tile" onclick="go('stars')"><span class="icon">⭐</span><b>النجوم</b><span>سماك الخاصة</span></button>
+    <button class="tile" onclick="go('surprises')"><span class="icon">🎁</span><b>مفاجآت</b><span>ليكي دايمًا</span></button>
+    <button class="tile" onclick="go('settings')"><span class="icon">⚙️</span><b>الإعدادات</b><span>حاجات مميزة</span></button>
+  </div>
+  <div class="card center"><div class="heart">♡</div><p>أعشق الهدوء حين يسكن تفاصيل الحياة<br>وأعشق الحياة حين تحمل لي روحًا تجعل وجودها أجمل من كل الأمنيات ❤️</p></div>
+</section>
+
+<section id="messages" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>💗 رسائل الحب</h2><span></span></div>
+ <div class="card message" id="messageText">أنتِ أجمل صدفة في حياتي وأجمل قرار في قلبي .. كل يوم باختارك من جديد لأنك ببساطة أجمل ما حدث لي ❤️</div>
+ <button class="btn" style="width:100%" onclick="nextMessage()">رسالة أخرى 💌</button>
+</section>
+
+<section id="music" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>🎵 موسيقتك</h2><span></span></div>
+ <div class="card center"><div style="font-size:95px">💿</div><h2>أغنية خاصة بيكي</h2><p class="small">اختاري أغنية من موبايلك لتشغيلها هنا</p><input type="file" accept="audio/*" id="audioFile"><audio id="player" controls style="width:100%;margin-top:15px"></audio><p class="small">الأغنية بتشتغل عندك على الجهاز فقط ومش بتترفع على الموقع.</p></div>
+</section>
+
+<section id="counter" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>🕰️ العداد</h2><span></span></div>
+ <div class="counterbox"><p>من يوم ما دخلتي حياتي ❤️</p><div class="counter" id="days">0</div><p>يوم من الحكاية الجميلة</p><div class="row"><div><b id="hours">0</b><div class="small">ساعة</div></div><div><b id="mins">0</b><div class="small">دقيقة</div></div><div><b id="secs">0</b><div class="small">ثانية</div></div></div></div>
+ <div class="card"><label>اكتب تاريخ البداية</label><input type="date" id="startDate"><button class="btn" onclick="saveDate()" style="width:100%">حفظ التاريخ ❤️</button></div>
+</section>
+
+<section id="stars" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>⭐ سماكي الخاصة</h2><span></span></div>
+ <div class="starfield"><div class="moon">🌙</div><div class="startext">حتى في أبعد النجوم ..<br>أجمل حاجة في الدنيا هي إنتِ ❤️</div></div>
+ <div class="card center">كل نجمة هنا بتفكرني بحاجة حلوة فيكي ✨</div>
+</section>
+
+<section id="surprises" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>🎁 مفاجآت</h2><span></span></div>
+ <div class="card center"><div class="gift">🎁</div><h2>مفاجأة ليكي من قلبي</h2><button class="btn" onclick="document.querySelector('.surprise').classList.add('show');this.style.display='none'">افتحي الهدية ❤️</button><div class="surprise message">لو الدنيا كلها اختارت الهدوء .. أنا هاختار عينيكي وابتسامتك وكل التفاصيل الصغيرة اللي بتخلي وجودك أجمل من أي حاجة 💗</div></div>
+</section>
+
+<section id="settings" class="screen">
+ <div class="top"><button class="back" onclick="go('home')">→</button><h2>⚙️ الإعدادات</h2><span></span></div>
+ <div class="card"><h3>💗 رسالة خاصة</h3><p class="small">غيّر الرسالة اللي بتظهر في البداية</p><input id="customName" placeholder="اسمها أو اللقب اللي بتحبه"><button class="btn" onclick="saveName()" style="width:100%">حفظ ❤️</button></div>
+ <div class="card center"><p>هدوء .. دايمًا وأبدًا</p><div class="heart" style="font-size:35px">♥</div></div>
+</section>
+
+<nav class="nav">
+ <button onclick="go('home')" id="n-home"><i>⌂</i>الرئيسية</button>
+ <button onclick="go('messages')" id="n-messages"><i>♡</i>الرسائل</button>
+ <button onclick="go('music')" id="n-music"><i>♫</i>الموسيقى</button>
+ <button onclick="go('stars')" id="n-stars"><i>☆</i>النجوم</button>
+ <button onclick="go('settings')" id="n-settings"><i>⚙</i>الإعدادات</button>
+</nav>
+</div>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+function go(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));let n=document.getElementById('n-'+id);if(n)n.classList.add('active');scrollTo(0,0)}
+const msgs=["أنتِ أجمل صدفة في حياتي وأجمل قرار في قلبي .. كل يوم باختارك من جديد لأنك ببساطة أجمل ما حدث لي ❤️","في وجودك حتى الأيام العادية بتبقى حكايات جميلة .. ربنا يخليكي لقلبي يا أحن حاجة فيه 🌸","أنا مش محتاج الدنيا كلها .. كفاية عندي ضحكتك وراحة قلبي وأنا بكلمك 💗","كل مرة بفتكرك فيها ببتسم من غير ما أحس .. إنتِ نعمة حقيقية في حياتي 🌙"];let mi=0;
+function nextMessage(){mi=(mi+1)%msgs.length;document.getElementById('messageText').textContent=msgs[mi]}
+const af=document.getElementById('audioFile');af.addEventListener('change',()=>{if(af.files[0])document.getElementById('player').src=URL.createObjectURL(af.files[0])});
+let start=localStorage.getItem('startDate');if(start)document.getElementById('startDate').value=start;
+function saveDate(){start=document.getElementById('startDate').value;if(start){localStorage.setItem('startDate',start);updateCounter();alert('اتحفظ التاريخ ❤️')}}
+function updateCounter(){if(!start)return;let diff=Math.max(0,Date.now()-new Date(start).getTime());let total=Math.floor(diff/1000);document.getElementById('days').textContent=Math.floor(total/86400);document.getElementById('hours').textContent=Math.floor(total/3600)%24;document.getElementById('mins').textContent=Math.floor(total/60)%60;document.getElementById('secs').textContent=total%60}
+setInterval(updateCounter,1000);updateCounter();
+function saveName(){let n=document.getElementById('customName').value.trim();if(n){document.querySelector('.brand').textContent=n;alert('اتحفظ الاسم ❤️')}}
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'));
+</script>
+</body>
+</html>
